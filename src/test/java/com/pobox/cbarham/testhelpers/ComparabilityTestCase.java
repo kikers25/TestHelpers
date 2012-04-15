@@ -1,10 +1,9 @@
 package com.pobox.cbarham.testhelpers;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
 import junit.framework.AssertionFailedError;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -91,7 +90,7 @@ public abstract class ComparabilityTestCase<T extends Comparable<T>> {
 	 * equivalent objects.
 	 */
 	protected void checkForEquality(T c1, T c2) {
-		Assert.assertNotSame("1st equal instance same as 2nd", c1, c2);
+		assertNotSame("1st equal instance same as 2nd", c1, c2);
 		assertEquals("1st equal not equal to 2nd", equal1, equal2);
 	}
 
