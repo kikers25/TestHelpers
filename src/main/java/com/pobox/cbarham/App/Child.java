@@ -11,13 +11,13 @@ public class Child extends Parent {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(Child.class);
 
-    public void morecrap() {
+    public void moreStuff() {
 
-        LOGGER.debug("morecrap() - start");
+        LOGGER.debug("moreStuff() - start");
 
         Date date = Calendar.getInstance().getTime();
-        LOGGER.error("shite", new RuntimeException("pants"));
+        LOGGER.error("bad thing", new RuntimeException("broken"));
         doesStuff();
-        LOGGER.debug("morecrap() - end");
+        LOGGER.debug("moreStuff() - end");
     }
 }

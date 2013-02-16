@@ -1,4 +1,3 @@
-
 package com.pobox.cbarham.App;
 
 import org.junit.Before;
@@ -19,6 +18,6 @@ public class ChildTest {
     @Test
     public void testing() {
 
-        child.morecrap();
+        child.moreStuff();
     }
 }

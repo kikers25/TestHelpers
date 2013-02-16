@@ -1,5 +1,12 @@
 package com.pobox.cbarham.App;
 
+import com.google.common.base.CharMatcher;
+import org.hamcrest.Description;
+import org.hamcrest.Matcher;
+import org.hamcrest.StringDescription;
+import org.junit.Ignore;
+import org.junit.Test;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.any;
@@ -11,18 +18,11 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.equalToIgnoringWhiteSpace;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.isA;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.Matchers.sameInstance;
-
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
-import org.hamcrest.StringDescription;
-import org.junit.Ignore;
-import org.junit.Test;
-
-import com.google.common.base.CharMatcher;
 
 public class AppTest {
 
@@ -101,7 +101,7 @@ public class AppTest {
 
     @Test
     public void isExampleShortCutForIsInstanceOfClass() throws Exception {
-        assertThat("Hello", is(String.class));
+        assertThat("Hello", isA(String.class));
         assertThat("Hello", instanceOf(String.class));
     }
 
